@@ -1,2 +1,9 @@
-﻿  EngineSFML.cpp
+﻿  Engine.cpp
+  EngineSFML.cpp
+  PrimitiveRenderer.cpp
+C:\Users\User\Desktop\Projketgrafika2D\Sfml_Engine_Orginal\EngineSFML\PrimitiveRenderer.cpp(27,52): warning C4244: "argument": konwersja z "int" do "float", możliwa utrata danych
+C:\Users\User\Desktop\Projketgrafika2D\Sfml_Engine_Orginal\EngineSFML\PrimitiveRenderer.cpp(27,49): warning C4244: "argument": konwersja z "int" do "float", możliwa utrata danych
+C:\Users\User\Desktop\Projketgrafika2D\Sfml_Engine_Orginal\EngineSFML\PrimitiveRenderer.cpp(35,52): warning C4244: "argument": konwersja z "int" do "float", możliwa utrata danych
+C:\Users\User\Desktop\Projketgrafika2D\Sfml_Engine_Orginal\EngineSFML\PrimitiveRenderer.cpp(35,30): warning C4244: "argument": konwersja z "int" do "float", możliwa utrata danych
+  Generowanie kodu...
   EngineSFML.vcxproj -> C:\Users\User\Desktop\Projketgrafika2D\Sfml_Engine_Orginal\x64\Debug\EngineSFML.exe
