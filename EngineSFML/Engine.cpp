@@ -16,10 +16,18 @@ int Engine::inicjalizajcja(unsigned int X, unsigned int Y,string Tytul,bool peln
 }
 void Engine::petla_gry() {
 	while (window.isOpen()) {
+		Engine::run();
 
 	}
 }
-void Engine::Klawiatura(string przycisk) {
+void Engine::Klawiatura(char przycisk, void(*wskaznik_na_funckje)()){
 	Event event;
-	if(event.type == )
+	if(window.pollEvent(event)) {
+		if (event.type == Event::KeyPressed) {
+			if (Keyboard::isKeyPressed(Keyboard::Key(przycisk))) {
+				wskaznik_na_funckje();
+			}
+		}
+	}
 }
+void Engine::run(){}
