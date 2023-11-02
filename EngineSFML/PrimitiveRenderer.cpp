@@ -4,7 +4,7 @@ using namespace std;
 using namespace sf;
 
 void PrimitiveRenderer::put_pixel(RenderWindow& window, float x, float y, Color color) {
-	pixel.setSize(Vector2f(5.0f, 5.0f));
+	pixel.setSize(Vector2f(3.0f, 3.0f));
 	pixel.setFillColor(color);
 	pixel.setPosition(x, y);
 	window.draw(pixel);
@@ -28,6 +28,7 @@ void PrimitiveRenderer::rysuj_linie(RenderWindow& window,int x0, int y0, int x1,
         }
     }
     else {
+       
         m = dy / dx;
         y = static_cast<float>(y0);
 
@@ -42,10 +43,10 @@ void PrimitiveRenderer:: rysuj_kwadrat(RenderWindow& window,int x1, int x2, int 
     PrimitiveRenderer::rysuj_linie(window, x1, y1, x2, y2, kolor);
     PrimitiveRenderer::rysuj_linie(window, x2, y2, x3, y3, kolor);
     PrimitiveRenderer::rysuj_linie(window, x4, y4, x3, y3, kolor);
-    PrimitiveRenderer::rysuj_linie(window, x4, y4, x1, y1, kolor);
+    PrimitiveRenderer::rysuj_linie(window, x1, y1, x4, y4, kolor);
 }
 void PrimitiveRenderer::rysuj_trojkat(RenderWindow& window, int x1, int x2, int x3, int y1, int y2, int y3, Color kolor) {
     PrimitiveRenderer::rysuj_linie(window, x1, y1, x2, y2, kolor);
     PrimitiveRenderer::rysuj_linie(window, x2, y2, x3, y3, kolor);
-    PrimitiveRenderer::rysuj_linie(window, x3, y3, x1, y1, kolor);
+    PrimitiveRenderer::rysuj_linie(window, x1, y1, x3, y3, kolor);
 }

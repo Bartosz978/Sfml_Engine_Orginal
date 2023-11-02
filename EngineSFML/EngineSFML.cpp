@@ -18,12 +18,12 @@ int main()
     //gra.wypelnij_ekran(Color::Magenta);
 GRA.put_pixel(gra.window,100, 100, Color::Red);
 //GRA.rysuj_linie(gra.window,1,100,400,400,Color::Blue);
-GRA.rysuj_kwadrat(gra.window, 10, 100, 100, 10, 10, 10, 100, 100, Color::Blue);
+GRA.rysuj_kwadrat(gra.window, 10, 100, 150, 40, 10, 10, 100, 100, Color::Blue);
 GRA.rysuj_trojkat(gra.window, 10, 50, 60, 40, 40, 90,Color::Red);
 void(*wskaznik)() = &f1;
 while (true)
 {
-    sEvent event;
+    Event event;
     if (gra.window.pollEvent(event)) {
         gra.Mysz_prawy_nacisniety(wskaznik, event);
     }
