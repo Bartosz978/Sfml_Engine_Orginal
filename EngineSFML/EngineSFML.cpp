@@ -14,7 +14,8 @@ int main()
     PrimitiveRenderer GRA;
     
 GRA.put_pixel(gra.window,100, 100, Color::Red);
-GRA.rysuj_linie(gra.window,1,100,400,400,Color::Blue);
+//GRA.rysuj_linie(gra.window,1,100,400,400,Color::Blue);
+GRA.rysuj_kwadrat(gra.window, 10, 100, 100, 10, 10, 10, 100, 100, Color::Blue);
   
   
     gra.petla_gry();

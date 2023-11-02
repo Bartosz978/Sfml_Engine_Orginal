@@ -1,2 +1,6 @@
-﻿  EngineSFML.cpp
+﻿  PrimitiveRenderer.cpp
+C:\Users\Q\Desktop\Mario\EngineSFML\EngineSFML\PrimitiveRenderer.cpp(25,35): warning C4244: "argument": konwersja z "int" do "float", możliwa utrata danych
+C:\Users\Q\Desktop\Mario\EngineSFML\EngineSFML\PrimitiveRenderer.cpp(25,31): warning C4244: "argument": konwersja z "int" do "float", możliwa utrata danych
+C:\Users\Q\Desktop\Mario\EngineSFML\EngineSFML\PrimitiveRenderer.cpp(33,53): warning C4244: "argument": konwersja z "int" do "float", możliwa utrata danych
+C:\Users\Q\Desktop\Mario\EngineSFML\EngineSFML\PrimitiveRenderer.cpp(33,31): warning C4244: "argument": konwersja z "int" do "float", możliwa utrata danych
   EngineSFML.vcxproj -> C:\Users\Q\Desktop\Mario\EngineSFML\x64\Debug\EngineSFML.exe
