@@ -20,14 +20,13 @@ void Engine::petla_gry() {
 
 	}
 }
-void Engine::Klawiatura(char przycisk, void(*wskaznik_na_funckje)()){
-	Event event;
-	if(window.pollEvent(event)) {
+void Engine::Klawiatura(char przycisk, void(*wskaznik_na_funckje)(),Event event){
+	
 		if (event.type == Event::KeyPressed) {
 			if (Keyboard::isKeyPressed(Keyboard::Key(przycisk))) {
 				wskaznik_na_funckje();
 			}
-		}
+		
 	}
 }
 void Engine::run(){}
