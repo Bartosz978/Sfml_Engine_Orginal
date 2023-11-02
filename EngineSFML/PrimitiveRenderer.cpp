@@ -38,6 +38,16 @@ void PrimitiveRenderer::rysuj_linie(RenderWindow& window,int x0, int y0, int x1,
         }
     }
 }
+void PrimitiveRenderer::rysuj_okrag(RenderWindow& window, int x0, int y0, int radius, Color color)
+{
+    float alpha = 0;
+    while (alpha <= 2 * 3.14159265358979323846) {
+        int x = static_cast<int>(x0 + radius * cos(alpha));
+        int y = static_cast<int>(y0 + radius * sin(alpha));
+        PrimitiveRenderer::put_pixel(window, x, y, color);
+        alpha += 0.01; // Zwiêksz k¹t o ma³¹ wartoœæ
+    }
+}
 
 void PrimitiveRenderer:: rysuj_kwadrat(RenderWindow& window,int x1, int x2, int x3, int x4, int y1, int y2, int y3, int y4, Color kolor) {
     PrimitiveRenderer::rysuj_linie(window, x1, y1, x2, y2, kolor);

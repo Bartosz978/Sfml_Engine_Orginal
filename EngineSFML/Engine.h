@@ -15,7 +15,7 @@ public:
 	void Mysz_lewy_zrelaksowany(void(*wskaznik_na_funckje)(), sf::Event event);
 	 void Mysz_Ruch_nacisniety(void(*wskaznik_na_funckje)(), sf::Event event);
 
-	 void wypelnij_ekran(sf::Color kolor);
+	 //void wypelnij_ekran(sf::Color kolor);
 	 virtual void run();
 };
 
