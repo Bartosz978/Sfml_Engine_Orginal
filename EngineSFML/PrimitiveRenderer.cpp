@@ -22,6 +22,7 @@ void PrimitiveRenderer::rysuj_linie(RenderWindow& window,int x0, int y0, int x1,
         if (y0 > y1) {
             swap(y0, y1);
         }
+      
         for (int y = y0; y <= y1; y++) {
             PrimitiveRenderer::put_pixel(window,x0,y,kolor);
         }
@@ -36,9 +37,15 @@ void PrimitiveRenderer::rysuj_linie(RenderWindow& window,int x0, int y0, int x1,
         }
     }
 }
-void PrimitiveRenderer:: rysuj_kwadrat(RenderWindow& window,int x1, int x2, int x3, int x4, int y1, int y2, int y3, int y4, sf::Color kolor) {
+
+void PrimitiveRenderer:: rysuj_kwadrat(RenderWindow& window,int x1, int x2, int x3, int x4, int y1, int y2, int y3, int y4, Color kolor) {
     PrimitiveRenderer::rysuj_linie(window, x1, y1, x2, y2, kolor);
     PrimitiveRenderer::rysuj_linie(window, x2, y2, x3, y3, kolor);
     PrimitiveRenderer::rysuj_linie(window, x4, y4, x3, y3, kolor);
     PrimitiveRenderer::rysuj_linie(window, x4, y4, x1, y1, kolor);
+}
+void PrimitiveRenderer::rysuj_trojkat(RenderWindow& window, int x1, int x2, int x3, int y1, int y2, int y3, Color kolor) {
+    PrimitiveRenderer::rysuj_linie(window, x1, y1, x2, y2, kolor);
+    PrimitiveRenderer::rysuj_linie(window, x2, y2, x3, y3, kolor);
+    PrimitiveRenderer::rysuj_linie(window, x3, y3, x1, y1, kolor);
 }

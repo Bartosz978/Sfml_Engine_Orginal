@@ -16,7 +16,7 @@ int main()
 GRA.put_pixel(gra.window,100, 100, Color::Red);
 //GRA.rysuj_linie(gra.window,1,100,400,400,Color::Blue);
 GRA.rysuj_kwadrat(gra.window, 10, 100, 100, 10, 10, 10, 100, 100, Color::Blue);
-  
+GRA.rysuj_trojkat(gra.window, 10, 50, 60, 40, 40, 90,Color::Red);
   
     gra.petla_gry();
    
