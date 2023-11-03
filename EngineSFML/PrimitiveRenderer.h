@@ -15,6 +15,9 @@ public:
     void rysuj_kwadrat(sf::RenderWindow& window,int x1, int x2, int x3,int x4,int y1,int y2,int y3,int y4, sf::Color kolor);
     void rysuj_trojkat(sf::RenderWindow& window, int x1, int x2, int x3, int y1, int y2, int y3,sf::Color kolor);
     void rysuj_okrag(sf::RenderWindow& window, int x0, int y0, int radius, sf::Color color);
+    void rysuj_okrag_pelny(sf::RenderWindow& window, int x0, int y0, int radius, sf::Color color);
+    void rysuj_trojkat_pelny(sf::RenderWindow& window, int x1, int x2, int x3, int y1, int y2, int y3, sf::Color kolor);
+    void rysuj_czworokat_pelny(sf::RenderWindow& window, int x1, int x2, int x3, int x4, int y1, int y2, int y3, int y4, sf::Color kolor);
 };
 
 /*
