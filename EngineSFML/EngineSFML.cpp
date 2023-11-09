@@ -29,6 +29,8 @@ GRA.rysuj_czworokat_pelny(gra.window, 483, 636, 563, 332, 499, 580, 766, 563, Co
 
 
 
+   // GRA.rysuj_trojkat(gra.window, 10, 50, 60, 40, 40, 90, Color::Red);
+    GRA.rysuj_linie(gra.window, 50, 30, 70, 100, Color::Yellow);
 
 void(*wskaznik)() = &f1;
 while (true)

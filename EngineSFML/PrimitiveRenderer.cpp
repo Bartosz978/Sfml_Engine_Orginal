@@ -4,18 +4,22 @@ using namespace std;
 using namespace sf;
 
 void PrimitiveRenderer::put_pixel(RenderWindow& window, float x, float y, Color color) {
-	pixel.setSize(Vector2f(3.0f, 3.0f));
+	/*pixel.setSize(Vector2f(5.0f, 5.0f));
 	pixel.setFillColor(color);
 	pixel.setPosition(x, y);
 	window.draw(pixel);
-	window.display();
+	*/
+    Vertex vertex(Vector2f(x,y),color);
+    
+    window.draw(&vertex,1,Points);
+    window.display();
 
 }
 void PrimitiveRenderer::rysuj_linie(RenderWindow& window,int x0, int y0, int x1, int y1, Color kolor) {
     int x;
     float dy, dx, y, m;
-    dy = static_cast<float>(y1 - y0);
-    dx = static_cast<float>(x1 - x0);
+    dy = (float )(y1 - y0);
+    dx = (float)(x1 - x0);
 
     if (dx == 0) {
 
@@ -30,10 +34,10 @@ void PrimitiveRenderer::rysuj_linie(RenderWindow& window,int x0, int y0, int x1,
     else {
        
         m = dy / dx;
-        y = static_cast<float>(y0);
+        y = (float)(y0);
 
         for (x = x0; x <= x1; x++) {
-            put_pixel(window,x, static_cast<int>(y + 0.5), kolor);
+            put_pixel(window,x, (int)(y + 0.5), kolor);
             y += m;
         }
     }
