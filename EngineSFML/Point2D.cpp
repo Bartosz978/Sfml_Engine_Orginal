@@ -12,7 +12,9 @@ void Point2D::edytuj(unsigned int x, unsigned int y) {
 	Y_P = y;
 }
 void Point2D::rysuj(sf::RenderWindow& window, unsigned int x, unsigned int y,Color color) {
-	PrimitiveRenderer::put_pixel(window, (float)x, (float)y, color);
+	PrimitiveRenderer pomoc;
+
+	pomoc.put_pixel(window, (float)x, (float)y, color);
 }
 
 Point2D::Point2D() {

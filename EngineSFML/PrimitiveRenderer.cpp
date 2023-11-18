@@ -197,3 +197,12 @@ void PrimitiveRenderer::rysuj_czworokat_pelny(RenderWindow& window, int x1, int 
     
 
 }
+void PrimitiveRenderer::Rysuj_Linie_lamana(RenderWindow& window, vector<Point2D>zbior_punktow, Color kolor) {
+  
+   if(zbior_punktow.size() == 1 || zbior_punktow.size() == 0) {
+        return;
+    }
+    for (int i = 0; i < zbior_punktow.size()-1; i++) {
+        PrimitiveRenderer::rysuj_linie(window, zbior_punktow[i].X_P, zbior_punktow[i].Y_P, zbior_punktow[i+1].X_P, zbior_punktow[i+1].Y_P,kolor);
+    }
+}
