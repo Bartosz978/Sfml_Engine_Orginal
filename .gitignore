@@ -1,0 +1,10 @@
+# Visual Studio
+.vs/
+*.suo
+*.user
+*.user.props
+*.sdf
+*.opensdf
+
+# SFML
+extlibs/
