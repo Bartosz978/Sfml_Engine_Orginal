@@ -1,72 +1,73 @@
-﻿  EngineSFML.cpp
-C:\Users\Q\Desktop\Mario\EngineSFML\EngineSFML\PrimitiveRenderer.h(23,67): error C2065: "Point2D": niezadeklarowany identyfikator
-C:\Users\Q\Desktop\Mario\EngineSFML\EngineSFML\PrimitiveRenderer.h(23,60): error C2923: „std::vector”: „Point2D” nie jest prawidłowym argumentem typu szablon dla parametru „_Ty”
-C:\Users\Q\Desktop\Mario\EngineSFML\EngineSFML\PrimitiveRenderer.h(23,67): message : zobacz deklarację „Point2D”
-C:\Users\Q\Desktop\Mario\EngineSFML\EngineSFML\PrimitiveRenderer.h(23,60): error C2976: „std::vector”: za mało argumentów szablon
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\vector(494,1): message : zobacz deklarację „std::vector”
-  LineSegment.cpp
-C:\Users\Q\Desktop\Mario\EngineSFML\EngineSFML\PrimitiveRenderer.h(23,67): error C2065: "Point2D": niezadeklarowany identyfikator
-C:\Users\Q\Desktop\Mario\EngineSFML\EngineSFML\PrimitiveRenderer.h(23,60): error C2923: „std::vector”: „Point2D” nie jest prawidłowym argumentem typu szablon dla parametru „_Ty”
-C:\Users\Q\Desktop\Mario\EngineSFML\EngineSFML\PrimitiveRenderer.h(23,67): message : zobacz deklarację „Point2D”
-C:\Users\Q\Desktop\Mario\EngineSFML\EngineSFML\PrimitiveRenderer.h(23,60): error C2976: „std::vector”: za mało argumentów szablon
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\vector(494,1): message : zobacz deklarację „std::vector”
+﻿  LineSegment.cpp
   Point2D.cpp
-C:\Users\Q\Desktop\Mario\EngineSFML\EngineSFML\PrimitiveRenderer.h(23,67): error C2065: "Point2D": niezadeklarowany identyfikator
-C:\Users\Q\Desktop\Mario\EngineSFML\EngineSFML\PrimitiveRenderer.h(23,60): error C2923: „std::vector”: „Point2D” nie jest prawidłowym argumentem typu szablon dla parametru „_Ty”
-C:\Users\Q\Desktop\Mario\EngineSFML\EngineSFML\PrimitiveRenderer.h(23,67): message : zobacz deklarację „Point2D”
-C:\Users\Q\Desktop\Mario\EngineSFML\EngineSFML\PrimitiveRenderer.h(23,60): error C2976: „std::vector”: za mało argumentów szablon
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\vector(494,1): message : zobacz deklarację „std::vector”
+C:\Users\Q\Desktop\Mario\EngineSFML\EngineSFML\Point2D.cpp(18,25): warning C4244: "argument": konwersja z "int" do "float", możliwa utrata danych
+C:\Users\Q\Desktop\Mario\EngineSFML\EngineSFML\Point2D.cpp(18,20): warning C4244: "argument": konwersja z "int" do "float", możliwa utrata danych
   PrimitiveRenderer.cpp
-C:\Users\Q\Desktop\Mario\EngineSFML\EngineSFML\PrimitiveRenderer.cpp(30,35): warning C4244: "argument": konwersja z "int" do "float", możliwa utrata danych
-C:\Users\Q\Desktop\Mario\EngineSFML\EngineSFML\PrimitiveRenderer.cpp(30,31): warning C4244: "argument": konwersja z "int" do "float", możliwa utrata danych
-C:\Users\Q\Desktop\Mario\EngineSFML\EngineSFML\PrimitiveRenderer.cpp(46,26): warning C4244: "argument": konwersja z "int" do "float", możliwa utrata danych
-C:\Users\Q\Desktop\Mario\EngineSFML\EngineSFML\PrimitiveRenderer.cpp(46,23): warning C4244: "argument": konwersja z "int" do "float", możliwa utrata danych
-C:\Users\Q\Desktop\Mario\EngineSFML\EngineSFML\PrimitiveRenderer.cpp(57,30): warning C4244: "argument": konwersja z "int" do "float", możliwa utrata danych
-C:\Users\Q\Desktop\Mario\EngineSFML\EngineSFML\PrimitiveRenderer.cpp(57,27): warning C4244: "argument": konwersja z "int" do "float", możliwa utrata danych
-C:\Users\Q\Desktop\Mario\EngineSFML\EngineSFML\PrimitiveRenderer.cpp(66,49): warning C4244: "argument": konwersja z "int" do "float", możliwa utrata danych
-C:\Users\Q\Desktop\Mario\EngineSFML\EngineSFML\PrimitiveRenderer.cpp(66,46): warning C4244: "argument": konwersja z "int" do "float", możliwa utrata danych
-C:\Users\Q\Desktop\Mario\EngineSFML\EngineSFML\PrimitiveRenderer.cpp(67,22): warning C4305: "+=": obcięcie z "double" do "float"
-C:\Users\Q\Desktop\Mario\EngineSFML\EngineSFML\PrimitiveRenderer.cpp(97,42): warning C4244: "argument": konwersja z "int" do "T", możliwa utrata danych
+C:\Users\Q\Desktop\Mario\EngineSFML\EngineSFML\PrimitiveRenderer.cpp(26,35): warning C4244: "argument": konwersja z "int" do "float", możliwa utrata danych
+C:\Users\Q\Desktop\Mario\EngineSFML\EngineSFML\PrimitiveRenderer.cpp(26,31): warning C4244: "argument": konwersja z "int" do "float", możliwa utrata danych
+C:\Users\Q\Desktop\Mario\EngineSFML\EngineSFML\PrimitiveRenderer.cpp(42,26): warning C4244: "argument": konwersja z "int" do "float", możliwa utrata danych
+C:\Users\Q\Desktop\Mario\EngineSFML\EngineSFML\PrimitiveRenderer.cpp(42,23): warning C4244: "argument": konwersja z "int" do "float", możliwa utrata danych
+C:\Users\Q\Desktop\Mario\EngineSFML\EngineSFML\PrimitiveRenderer.cpp(53,30): warning C4244: "argument": konwersja z "int" do "float", możliwa utrata danych
+C:\Users\Q\Desktop\Mario\EngineSFML\EngineSFML\PrimitiveRenderer.cpp(53,27): warning C4244: "argument": konwersja z "int" do "float", możliwa utrata danych
+C:\Users\Q\Desktop\Mario\EngineSFML\EngineSFML\PrimitiveRenderer.cpp(62,49): warning C4244: "argument": konwersja z "int" do "float", możliwa utrata danych
+C:\Users\Q\Desktop\Mario\EngineSFML\EngineSFML\PrimitiveRenderer.cpp(62,46): warning C4244: "argument": konwersja z "int" do "float", możliwa utrata danych
+C:\Users\Q\Desktop\Mario\EngineSFML\EngineSFML\PrimitiveRenderer.cpp(63,22): warning C4305: "+=": obcięcie z "double" do "float"
+C:\Users\Q\Desktop\Mario\EngineSFML\EngineSFML\PrimitiveRenderer.cpp(93,42): warning C4244: "argument": konwersja z "int" do "T", możliwa utrata danych
           with
           [
               T=float
           ]
-C:\Users\Q\Desktop\Mario\EngineSFML\EngineSFML\PrimitiveRenderer.cpp(97,38): warning C4244: "argument": konwersja z "int" do "T", możliwa utrata danych
+C:\Users\Q\Desktop\Mario\EngineSFML\EngineSFML\PrimitiveRenderer.cpp(93,38): warning C4244: "argument": konwersja z "int" do "T", możliwa utrata danych
           with
           [
               T=float
           ]
-C:\Users\Q\Desktop\Mario\EngineSFML\EngineSFML\PrimitiveRenderer.cpp(98,42): warning C4244: "argument": konwersja z "int" do "T", możliwa utrata danych
+C:\Users\Q\Desktop\Mario\EngineSFML\EngineSFML\PrimitiveRenderer.cpp(94,42): warning C4244: "argument": konwersja z "int" do "T", możliwa utrata danych
           with
           [
               T=float
           ]
-C:\Users\Q\Desktop\Mario\EngineSFML\EngineSFML\PrimitiveRenderer.cpp(98,38): warning C4244: "argument": konwersja z "int" do "T", możliwa utrata danych
+C:\Users\Q\Desktop\Mario\EngineSFML\EngineSFML\PrimitiveRenderer.cpp(94,38): warning C4244: "argument": konwersja z "int" do "T", możliwa utrata danych
           with
           [
               T=float
           ]
-C:\Users\Q\Desktop\Mario\EngineSFML\EngineSFML\PrimitiveRenderer.cpp(99,42): warning C4244: "argument": konwersja z "int" do "T", możliwa utrata danych
+C:\Users\Q\Desktop\Mario\EngineSFML\EngineSFML\PrimitiveRenderer.cpp(95,42): warning C4244: "argument": konwersja z "int" do "T", możliwa utrata danych
           with
           [
               T=float
           ]
-C:\Users\Q\Desktop\Mario\EngineSFML\EngineSFML\PrimitiveRenderer.cpp(99,38): warning C4244: "argument": konwersja z "int" do "T", możliwa utrata danych
+C:\Users\Q\Desktop\Mario\EngineSFML\EngineSFML\PrimitiveRenderer.cpp(95,38): warning C4244: "argument": konwersja z "int" do "T", możliwa utrata danych
           with
           [
               T=float
           ]
-C:\Users\Q\Desktop\Mario\EngineSFML\EngineSFML\PrimitiveRenderer.cpp(100,42): warning C4244: "argument": konwersja z "int" do "T", możliwa utrata danych
+C:\Users\Q\Desktop\Mario\EngineSFML\EngineSFML\PrimitiveRenderer.cpp(96,42): warning C4244: "argument": konwersja z "int" do "T", możliwa utrata danych
           with
           [
               T=float
           ]
-C:\Users\Q\Desktop\Mario\EngineSFML\EngineSFML\PrimitiveRenderer.cpp(100,38): warning C4244: "argument": konwersja z "int" do "T", możliwa utrata danych
+C:\Users\Q\Desktop\Mario\EngineSFML\EngineSFML\PrimitiveRenderer.cpp(96,38): warning C4244: "argument": konwersja z "int" do "T", możliwa utrata danych
           with
           [
               T=float
           ]
-C:\Users\Q\Desktop\Mario\EngineSFML\EngineSFML\PrimitiveRenderer.cpp(118,20): warning C4244: "inicjowanie": konwersja z "T" do "int", możliwa utrata danych
+C:\Users\Q\Desktop\Mario\EngineSFML\EngineSFML\PrimitiveRenderer.cpp(114,20): warning C4244: "inicjowanie": konwersja z "T" do "int", możliwa utrata danych
+          with
+          [
+              T=float
+          ]
+C:\Users\Q\Desktop\Mario\EngineSFML\EngineSFML\PrimitiveRenderer.cpp(115,20): warning C4244: "inicjowanie": konwersja z "T" do "int", możliwa utrata danych
+          with
+          [
+              T=float
+          ]
+C:\Users\Q\Desktop\Mario\EngineSFML\EngineSFML\PrimitiveRenderer.cpp(116,20): warning C4244: "inicjowanie": konwersja z "T" do "int", możliwa utrata danych
+          with
+          [
+              T=float
+          ]
+C:\Users\Q\Desktop\Mario\EngineSFML\EngineSFML\PrimitiveRenderer.cpp(117,20): warning C4244: "inicjowanie": konwersja z "T" do "int", możliwa utrata danych
           with
           [
               T=float
@@ -81,108 +82,93 @@ C:\Users\Q\Desktop\Mario\EngineSFML\EngineSFML\PrimitiveRenderer.cpp(120,20): wa
           [
               T=float
           ]
-C:\Users\Q\Desktop\Mario\EngineSFML\EngineSFML\PrimitiveRenderer.cpp(121,20): warning C4244: "inicjowanie": konwersja z "T" do "int", możliwa utrata danych
+C:\Users\Q\Desktop\Mario\EngineSFML\EngineSFML\PrimitiveRenderer.cpp(137,49): warning C4244: "argument": konwersja z "int" do "T", możliwa utrata danych
           with
           [
               T=float
           ]
-C:\Users\Q\Desktop\Mario\EngineSFML\EngineSFML\PrimitiveRenderer.cpp(123,20): warning C4244: "inicjowanie": konwersja z "T" do "int", możliwa utrata danych
+C:\Users\Q\Desktop\Mario\EngineSFML\EngineSFML\PrimitiveRenderer.cpp(137,45): warning C4244: "argument": konwersja z "int" do "T", możliwa utrata danych
           with
           [
               T=float
           ]
-C:\Users\Q\Desktop\Mario\EngineSFML\EngineSFML\PrimitiveRenderer.cpp(124,20): warning C4244: "inicjowanie": konwersja z "T" do "int", możliwa utrata danych
+C:\Users\Q\Desktop\Mario\EngineSFML\EngineSFML\PrimitiveRenderer.cpp(138,49): warning C4244: "argument": konwersja z "int" do "T", możliwa utrata danych
           with
           [
               T=float
           ]
-C:\Users\Q\Desktop\Mario\EngineSFML\EngineSFML\PrimitiveRenderer.cpp(141,49): warning C4244: "argument": konwersja z "int" do "T", możliwa utrata danych
+C:\Users\Q\Desktop\Mario\EngineSFML\EngineSFML\PrimitiveRenderer.cpp(138,45): warning C4244: "argument": konwersja z "int" do "T", możliwa utrata danych
           with
           [
               T=float
           ]
-C:\Users\Q\Desktop\Mario\EngineSFML\EngineSFML\PrimitiveRenderer.cpp(141,45): warning C4244: "argument": konwersja z "int" do "T", możliwa utrata danych
+C:\Users\Q\Desktop\Mario\EngineSFML\EngineSFML\PrimitiveRenderer.cpp(151,36): warning C4244: "argument": konwersja z "int" do "T", możliwa utrata danych
           with
           [
               T=float
           ]
-C:\Users\Q\Desktop\Mario\EngineSFML\EngineSFML\PrimitiveRenderer.cpp(142,49): warning C4244: "argument": konwersja z "int" do "T", możliwa utrata danych
+C:\Users\Q\Desktop\Mario\EngineSFML\EngineSFML\PrimitiveRenderer.cpp(151,32): warning C4244: "argument": konwersja z "int" do "T", możliwa utrata danych
           with
           [
               T=float
           ]
-C:\Users\Q\Desktop\Mario\EngineSFML\EngineSFML\PrimitiveRenderer.cpp(142,45): warning C4244: "argument": konwersja z "int" do "T", możliwa utrata danych
+C:\Users\Q\Desktop\Mario\EngineSFML\EngineSFML\PrimitiveRenderer.cpp(152,36): warning C4244: "argument": konwersja z "int" do "T", możliwa utrata danych
           with
           [
               T=float
           ]
-C:\Users\Q\Desktop\Mario\EngineSFML\EngineSFML\PrimitiveRenderer.cpp(155,36): warning C4244: "argument": konwersja z "int" do "T", możliwa utrata danych
+C:\Users\Q\Desktop\Mario\EngineSFML\EngineSFML\PrimitiveRenderer.cpp(152,32): warning C4244: "argument": konwersja z "int" do "T", możliwa utrata danych
           with
           [
               T=float
           ]
-C:\Users\Q\Desktop\Mario\EngineSFML\EngineSFML\PrimitiveRenderer.cpp(155,32): warning C4244: "argument": konwersja z "int" do "T", możliwa utrata danych
+C:\Users\Q\Desktop\Mario\EngineSFML\EngineSFML\PrimitiveRenderer.cpp(153,36): warning C4244: "argument": konwersja z "int" do "T", możliwa utrata danych
           with
           [
               T=float
           ]
-C:\Users\Q\Desktop\Mario\EngineSFML\EngineSFML\PrimitiveRenderer.cpp(156,36): warning C4244: "argument": konwersja z "int" do "T", możliwa utrata danych
+C:\Users\Q\Desktop\Mario\EngineSFML\EngineSFML\PrimitiveRenderer.cpp(153,32): warning C4244: "argument": konwersja z "int" do "T", możliwa utrata danych
           with
           [
               T=float
           ]
-C:\Users\Q\Desktop\Mario\EngineSFML\EngineSFML\PrimitiveRenderer.cpp(156,32): warning C4244: "argument": konwersja z "int" do "T", możliwa utrata danych
+C:\Users\Q\Desktop\Mario\EngineSFML\EngineSFML\PrimitiveRenderer.cpp(154,36): warning C4244: "argument": konwersja z "int" do "T", możliwa utrata danych
           with
           [
               T=float
           ]
-C:\Users\Q\Desktop\Mario\EngineSFML\EngineSFML\PrimitiveRenderer.cpp(157,36): warning C4244: "argument": konwersja z "int" do "T", możliwa utrata danych
+C:\Users\Q\Desktop\Mario\EngineSFML\EngineSFML\PrimitiveRenderer.cpp(154,32): warning C4244: "argument": konwersja z "int" do "T", możliwa utrata danych
           with
           [
               T=float
           ]
-C:\Users\Q\Desktop\Mario\EngineSFML\EngineSFML\PrimitiveRenderer.cpp(157,32): warning C4244: "argument": konwersja z "int" do "T", możliwa utrata danych
+C:\Users\Q\Desktop\Mario\EngineSFML\EngineSFML\PrimitiveRenderer.cpp(168,20): warning C4244: "inicjowanie": konwersja z "T" do "int", możliwa utrata danych
           with
           [
               T=float
           ]
-C:\Users\Q\Desktop\Mario\EngineSFML\EngineSFML\PrimitiveRenderer.cpp(158,36): warning C4244: "argument": konwersja z "int" do "T", możliwa utrata danych
+C:\Users\Q\Desktop\Mario\EngineSFML\EngineSFML\PrimitiveRenderer.cpp(169,20): warning C4244: "inicjowanie": konwersja z "T" do "int", możliwa utrata danych
           with
           [
               T=float
           ]
-C:\Users\Q\Desktop\Mario\EngineSFML\EngineSFML\PrimitiveRenderer.cpp(158,32): warning C4244: "argument": konwersja z "int" do "T", możliwa utrata danych
+C:\Users\Q\Desktop\Mario\EngineSFML\EngineSFML\PrimitiveRenderer.cpp(170,20): warning C4244: "inicjowanie": konwersja z "T" do "int", możliwa utrata danych
           with
           [
               T=float
           ]
-C:\Users\Q\Desktop\Mario\EngineSFML\EngineSFML\PrimitiveRenderer.cpp(172,20): warning C4244: "inicjowanie": konwersja z "T" do "int", możliwa utrata danych
+C:\Users\Q\Desktop\Mario\EngineSFML\EngineSFML\PrimitiveRenderer.cpp(171,20): warning C4244: "inicjowanie": konwersja z "T" do "int", możliwa utrata danych
           with
           [
               T=float
           ]
-C:\Users\Q\Desktop\Mario\EngineSFML\EngineSFML\PrimitiveRenderer.cpp(173,20): warning C4244: "inicjowanie": konwersja z "T" do "int", możliwa utrata danych
+C:\Users\Q\Desktop\Mario\EngineSFML\EngineSFML\PrimitiveRenderer.cpp(175,23): warning C4244: "inicjowanie": konwersja z "float" do "int", możliwa utrata danych
+C:\Users\Q\Desktop\Mario\EngineSFML\EngineSFML\PrimitiveRenderer.cpp(187,62): warning C4244: "argument": konwersja z "int" do "T", możliwa utrata danych
           with
           [
               T=float
           ]
-C:\Users\Q\Desktop\Mario\EngineSFML\EngineSFML\PrimitiveRenderer.cpp(174,20): warning C4244: "inicjowanie": konwersja z "T" do "int", możliwa utrata danych
-          with
-          [
-              T=float
-          ]
-C:\Users\Q\Desktop\Mario\EngineSFML\EngineSFML\PrimitiveRenderer.cpp(175,20): warning C4244: "inicjowanie": konwersja z "T" do "int", możliwa utrata danych
-          with
-          [
-              T=float
-          ]
-C:\Users\Q\Desktop\Mario\EngineSFML\EngineSFML\PrimitiveRenderer.cpp(179,23): warning C4244: "inicjowanie": konwersja z "float" do "int", możliwa utrata danych
-C:\Users\Q\Desktop\Mario\EngineSFML\EngineSFML\PrimitiveRenderer.cpp(191,62): warning C4244: "argument": konwersja z "int" do "T", możliwa utrata danych
-          with
-          [
-              T=float
-          ]
-C:\Users\Q\Desktop\Mario\EngineSFML\EngineSFML\PrimitiveRenderer.cpp(191,59): warning C4244: "argument": konwersja z "_Ty" do "T", możliwa utrata danych
+C:\Users\Q\Desktop\Mario\EngineSFML\EngineSFML\PrimitiveRenderer.cpp(187,59): warning C4244: "argument": konwersja z "_Ty" do "T", możliwa utrata danych
           with
           [
               _Ty=int
@@ -191,12 +177,12 @@ C:\Users\Q\Desktop\Mario\EngineSFML\EngineSFML\PrimitiveRenderer.cpp(191,59): wa
           [
               T=float
           ]
-C:\Users\Q\Desktop\Mario\EngineSFML\EngineSFML\PrimitiveRenderer.cpp(192,66): warning C4244: "argument": konwersja z "int" do "T", możliwa utrata danych
+C:\Users\Q\Desktop\Mario\EngineSFML\EngineSFML\PrimitiveRenderer.cpp(188,66): warning C4244: "argument": konwersja z "int" do "T", możliwa utrata danych
           with
           [
               T=float
           ]
-C:\Users\Q\Desktop\Mario\EngineSFML\EngineSFML\PrimitiveRenderer.cpp(192,63): warning C4244: "argument": konwersja z "_Ty" do "T", możliwa utrata danych
+C:\Users\Q\Desktop\Mario\EngineSFML\EngineSFML\PrimitiveRenderer.cpp(188,63): warning C4244: "argument": konwersja z "_Ty" do "T", możliwa utrata danych
           with
           [
               _Ty=int
@@ -206,3 +192,4 @@ C:\Users\Q\Desktop\Mario\EngineSFML\EngineSFML\PrimitiveRenderer.cpp(192,63): wa
               T=float
           ]
   Generowanie kodu...
+  EngineSFML.vcxproj -> C:\Users\Q\Desktop\Mario\EngineSFML\x64\Debug\EngineSFML.exe

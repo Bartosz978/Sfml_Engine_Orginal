@@ -8,10 +8,6 @@ void PrimitiveRenderer::put_pixel(RenderWindow& window, float x, float y, Color 
 	pixel.setFillColor(color);
 	pixel.setPosition(x, y);
 	window.draw(pixel);
-	
-   /*Vertex vertex(Vector2f(x, y), color);
-    
-    window.draw(&vertex,1,Points);*/
     window.display();
 
 }

@@ -15,9 +15,9 @@ void f1() {
 
 int main()
 {
-    Point2D point;
+    Point2D point(0,0);
    Engine gra;
-   LineSegment linia;
+   LineSegment linia(0,0,0,0);
     gra.inicjalizajcja(800, 800, "Gra", false);
     PrimitiveRenderer GRA;
  /*
@@ -34,7 +34,7 @@ GRA.rysuj_czworokat_pelny(gra.window, 483, 636, 563, 332, 499, 580, 766, 563, Co
 
    // GRA.rysuj_trojkat(gra.window, 10, 50, 60, 40, 40, 90, Color::Red);
     GRA.rysuj_linie(gra.window, 50, 30, 70, 100, Color::Yellow);
-    point.rysuj(gra.window, 600, 600, Color::Red);
+    point.rysuj(gra.window, Color::Red);
    
 point = linia.zwracam_odcinek(Poczotek);
 void(*wskaznik)() = &f1;

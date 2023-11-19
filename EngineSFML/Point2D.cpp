@@ -11,13 +11,17 @@ void Point2D::edytuj(unsigned int x, unsigned int y) {
 	X_P = x;
 	Y_P = y;
 }
-void Point2D::rysuj(sf::RenderWindow& window, unsigned int x, unsigned int y,Color color) {
-	PrimitiveRenderer pomoc;
-
-	pomoc.put_pixel(window, (float)x, (float)y, color);
+void Point2D::rysuj(sf::RenderWindow& window,Color color) {
+	RectangleShape pixel;
+	pixel.setSize(Vector2f(1.0f, 1.0f));
+	pixel.setFillColor(color);
+	pixel.setPosition(X_P, Y_P);
+	window.draw(pixel);
+	window.display();
+	
 }
 
-Point2D::Point2D() {
-	X_P = 0;
-	Y_P = 0;
+Point2D::Point2D(unsigned int x, unsigned int y) {
+	X_P = x;
+	Y_P = y;
 }
