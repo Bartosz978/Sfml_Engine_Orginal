@@ -17,7 +17,7 @@ int main()
 {
     Point2D point(0,0);
    Engine gra;
-   LineSegment linia(0,0,0,0);
+  // LineSegment linia(0,0,0,0);
     gra.inicjalizajcja(1000, 1000, "Gra", false);
     PrimitiveRenderer GRA;
  /*
@@ -31,7 +31,7 @@ GRA.rysuj_okrag_pelny(gra.window, 350, 150, 75, Color::Yellow);
 */
   ;
 
-    GRA.rysuj_trojkat(gra.window, 10, 50, 60, 40, 40, 90, Color::Red,2);
+   // GRA.rysuj_trojkat(gra.window, 10, 50, 60, 40, 40, 90, Color::Red,2);
     //GRA.rysuj_linie(gra.window, 50, 30, 70, 100, Color::Yellow);
    // point.rysuj(gra.window, Color::Red);
    // GRA.rysuj_trojkat_pelny(gra.window, 0, 0, 1000, 0, 1000, 1000, Color::Green);
@@ -44,18 +44,14 @@ GRA.rysuj_okrag_pelny(gra.window, 350, 150, 75, Color::Yellow);
       }
   }*/
 
-    GRA.rysuj_okrag_pelny(gra.window, 350, 150, 75, Color::Yellow);
+    //GRA.rysuj_okrag_pelny(gra.window, 350, 150, 75, Color::Yellow);
+    GRA.rysuj_czworokat_wypelniony(gra.window, 10, 100, 100, 10, 10, 10, 100, 100, Color::Green);
     gra.window.display();
-    sf::Vector2i pixelPosition(10, 10);
-    sf::Texture texture;
-    texture.create(gra.window.getSize().x, gra.window.getSize().y);
-    texture.update(gra.window);
-    sf::Image screenshot = texture.copyToImage();
-    sf::Color pixelColor = screenshot.getPixel(pixelPosition.x, pixelPosition.y);
+
         int d = 0;
-    d = pixelColor.g+pixelColor.r+pixelColor.b;
-    cout << d;
-point = linia.zwracam_odcinek(Poczotek);
+  //  d = pixelColor.g+pixelColor.r+pixelColor.b;
+   // cout << d;
+//point = linia.zwracam_odcinek(Poczotek);
 void(*wskaznik)() = &f1;
 while (true)
 {

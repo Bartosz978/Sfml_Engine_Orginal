@@ -206,33 +206,46 @@ void PrimitiveRenderer::Rysuj_Linie_lamana(RenderWindow& window, vector<Point2D>
 
 void PrimitiveRenderer::rysuj_czworokat_wypelniony(sf::RenderWindow& window, int x1, int x2, int x3, int x4, int y1, int y2, int y3, int y4, sf::Color kolor) {
     PrimitiveRenderer::rysuj_kwadrat(window, x1, x2, x3, x4, y1, y2, y3, y4, kolor, 1);
+    
+    sf::Texture texture;
+    texture.create(window.getSize().x, window.getSize().y);
+    texture.update(window);
+    sf::Image image = texture.copyToImage();
 
-    Texture teksture;
-    teksture.create(window.getSize().x, window.getSize().y);
-    teksture.update(window);
-    Image image = teksture.copyToImage();
-    Color pixelColor;
-
-    int max_Y=0, max_X=0, min_X=0, min_Y=0;
-    int tablicaX[4] = { x1,x2,x3,x4 };
-    int tablicaY[4] = { y1,y2,y3,y4 };
+    int max_Y = 0, max_X = 0, min_X = 0, min_Y = 0;
+    int tablicaX[4] = { x1, x2, x3, x4 };
+    int tablicaY[4] = { y1, y2, y3, y4 };
     for (int i = 0; i < 4; i++) {
-        if (max_X >= tablicaX[i]) {
+        if (max_X < tablicaX[i]) {
             max_X = tablicaX[i];
         }
-        if (max_Y >= tablicaY[i]) {
+        if (max_Y < tablicaY[i]) {
             max_Y = tablicaY[i];
         }
-        if (min_X <=  tablicaX[i]) {
+        if (min_X > tablicaX[i]) {
             min_X = tablicaX[i];
         }
-        if (min_Y <= tablicaX[i]) {
-            min_Y = tablicaX[i];
+        if (min_Y > tablicaY[i]) {
+            min_Y = tablicaY[i];
         }
     }
-    for (int i = max_X; i < max_X; i++) {
-        
+    bool pomoc = false;
+for (int i = min_Y; i <= max_Y; i++) {
+    for (int j = min_X; j <= max_X; j++) {
+        if (kolor != image.getPixel(j, i) && pomoc == false) {
+
+        }
+        if (kolor == image.getPixel(j, i) && pomoc == true) {
+            PrimitiveRenderer::put_pixel(window, j, i, kolor, 1);
+            cout << "Dziaala" << endl;
+        } else if (kolor == image.getPixel(j, i) && pomoc == false) {
+            pomoc = true;
+        } else if (kolor != image.getPixel(j, i) && pomoc == true) {
+            pomoc = false;
+        } else if (pomoc == true && (kolor != image.getPixel(j, i))) {
+            break;
+        }
     }
-    
-    
+}
+
 }

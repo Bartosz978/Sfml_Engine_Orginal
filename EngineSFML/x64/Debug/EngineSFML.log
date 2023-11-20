@@ -187,4 +187,6 @@ C:\Users\Q\Desktop\Mario\EngineSFML\EngineSFML\PrimitiveRenderer.cpp(189,63): wa
           [
               T=float
           ]
+C:\Users\Q\Desktop\Mario\EngineSFML\EngineSFML\PrimitiveRenderer.cpp(239,57): warning C4244: "argument": konwersja z "int" do "float", możliwa utrata danych
+C:\Users\Q\Desktop\Mario\EngineSFML\EngineSFML\PrimitiveRenderer.cpp(239,54): warning C4244: "argument": konwersja z "int" do "float", możliwa utrata danych
   EngineSFML.vcxproj -> C:\Users\Q\Desktop\Mario\EngineSFML\x64\Debug\EngineSFML.exe
