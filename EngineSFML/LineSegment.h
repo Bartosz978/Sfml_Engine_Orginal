@@ -14,7 +14,7 @@ public:
 	LineSegment(unsigned int x_0, unsigned int y_0, unsigned int x_1, unsigned int y_1);
 	Point2D zwracam_odcinek(enum Odcinek odcinek);
 	void Edytuj(unsigned int nowy_X, unsigned int nowy_Y, enum Odcinek odcinek);
-	void Rysuj(sf:: RenderWindow& window, sf::Color kolor);
+	void Rysuj(sf:: RenderWindow& window, sf::Color kolor,int rozmiar);
 };
 
 enum Odcinek

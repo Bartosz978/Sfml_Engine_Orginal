@@ -18,7 +18,7 @@ int main()
     Point2D point(0,0);
    Engine gra;
    LineSegment linia(0,0,0,0);
-    gra.inicjalizajcja(800, 800, "Gra", false);
+    gra.inicjalizajcja(1000, 1000, "Gra", false);
     PrimitiveRenderer GRA;
  /*
  // gra.wypelnij_ekran(Color::Magenta);
@@ -28,14 +28,33 @@ GRA.rysuj_okrag(gra.window, 100, 100, 60, Color::Yellow);
 GRA.rysuj_kwadrat(gra.window, 10, 100, 150, 40, 10, 10, 100, 100, Color::Blue);
 GRA.rysuj_trojkat(gra.window, 10, 50, 60, 40, 40, 90, Color::Red);
 GRA.rysuj_okrag_pelny(gra.window, 350, 150, 75, Color::Yellow);
-GRA.rysuj_trojkat_pelny(gra.window, 30, 200, 80, 700, 750, 500, Color::Green);
-GRA.rysuj_czworokat_pelny(gra.window, 483, 636, 563, 332, 499, 580, 766, 563, Color::Blue);
 */
+  ;
 
-   // GRA.rysuj_trojkat(gra.window, 10, 50, 60, 40, 40, 90, Color::Red);
-    GRA.rysuj_linie(gra.window, 50, 30, 70, 100, Color::Yellow);
-    point.rysuj(gra.window, Color::Red);
+    GRA.rysuj_trojkat(gra.window, 10, 50, 60, 40, 40, 90, Color::Red,2);
+    //GRA.rysuj_linie(gra.window, 50, 30, 70, 100, Color::Yellow);
+   // point.rysuj(gra.window, Color::Red);
+   // GRA.rysuj_trojkat_pelny(gra.window, 0, 0, 1000, 0, 1000, 1000, Color::Green);
+    //GRA.rysuj_czworokat_pelny(gra.window, 300, 700, 700, 300,300, 300, 700, 700, Color::Blue);
    
+  /*for (int i = 0; i < 100; i++) {
+      for (int j = 0; j < 200; j++)
+      {
+          GRA.put_pixel(gra.window, i*10, j*5, Color::Green);
+      }
+  }*/
+
+    GRA.rysuj_okrag_pelny(gra.window, 350, 150, 75, Color::Yellow);
+    gra.window.display();
+    sf::Vector2i pixelPosition(10, 10);
+    sf::Texture texture;
+    texture.create(gra.window.getSize().x, gra.window.getSize().y);
+    texture.update(gra.window);
+    sf::Image screenshot = texture.copyToImage();
+    sf::Color pixelColor = screenshot.getPixel(pixelPosition.x, pixelPosition.y);
+        int d = 0;
+    d = pixelColor.g+pixelColor.r+pixelColor.b;
+    cout << d;
 point = linia.zwracam_odcinek(Poczotek);
 void(*wskaznik)() = &f1;
 while (true)
