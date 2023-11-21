@@ -42,6 +42,4 @@ C:\Users\Q\Desktop\Mario\EngineSFML\EngineSFML\PrimitiveRenderer.cpp(216,62): wa
 C:\Users\Q\Desktop\Mario\EngineSFML\EngineSFML\PrimitiveRenderer.cpp(220,47): warning C4244: "argument": konwersja z "int" do "float", możliwa utrata danych
 C:\Users\Q\Desktop\Mario\EngineSFML\EngineSFML\PrimitiveRenderer.cpp(220,44): warning C4244: "argument": konwersja z "int" do "float", możliwa utrata danych
   Generowanie kodu...
-Engine.obj : warning LNK4099: nie znaleziono pliku PDB "" z elementem "Engine.obj" lub w pozycji ""; obiekt zostanie skonsolidowany bez informacji debugowania
-Point2D.obj : warning LNK4099: nie znaleziono pliku PDB "" z elementem "Point2D.obj" lub w pozycji ""; obiekt zostanie skonsolidowany bez informacji debugowania
   EngineSFML.vcxproj -> C:\Users\Q\Desktop\Mario\EngineSFML\x64\Debug\EngineSFML.exe

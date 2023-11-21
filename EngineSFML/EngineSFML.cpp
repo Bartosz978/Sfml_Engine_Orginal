@@ -5,6 +5,7 @@
 #include "LineSegment.h"
 #include <iostream>
 #include <cmath>
+#include "Player.h"
 
 using namespace std;
 using namespace sf;
@@ -22,6 +23,10 @@ int main()
   // LineSegment linia(0,0,0,0);
     gra.inicjalizajcja(500, 500, "Gra", false);
     PrimitiveRenderer GRA;
+    Texture playerTexture;
+    playerTexture.loadFromFile("images/idlee.png");
+
+    Player player(&playerTexture, sf::Vector2u(2, 2), 0.5f, 100.0f);
  /*
  // gra.wypelnij_ekran(Color::Magenta);
 GRA.put_pixel(gra.window,100, 100, Color::Red);
@@ -68,12 +73,20 @@ GRA.rysuj_okrag_pelny(gra.window, 350, 150, 75, Color::Yellow);
    // cout << d;
 //point = linia.zwracam_odcinek(Poczotek);
 void(*wskaznik)() = &f1;
+float czasDelta = 0.0f;
+Clock clock;
 while (true)
 {
+    czasDelta = clock.restart().asSeconds();
     Event event;
     if (gra.window.pollEvent(event)) {
         gra.Mysz_prawy_nacisniety(wskaznik, event);
     }
+    player.updatePlayer(czasDelta);
+
+    gra.window.clear(Color(150, 150, 150));
+    player.drawPlayer(gra.window);
+    gra.window.display();
 }
 
 
