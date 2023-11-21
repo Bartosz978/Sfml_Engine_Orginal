@@ -29,7 +29,7 @@ public:
     void rysuj_trojkat_wypelniony(sf::RenderWindow& window, int x1, int x2, int x3, int y1, int y2, int y3, sf::Color kolor);
 
     void rysuj_czworokat_wypelniony(sf::RenderWindow& window, int x1, int x2, int x3, int x4, int y1, int y2, int y3, int y4, sf::Color kolor);
-
+    void rysuj_ellipse(sf::RenderWindow& window, int x, int y, int a, int b, sf::Color color, int size);
     void Rysuj_Linie_lamana(sf::RenderWindow& window, std::vector<Point2D> zbior_punktow, sf::Color kolor, int rozmiar);
     void rysujOdcinek(RenderWindow& window, int& X0, int& Y0, int& X1, int& Y1, Color kolor, float rozmiar);
 };

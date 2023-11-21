@@ -17,6 +17,8 @@ int main()
 {
     Point2D point(0,0);
    Engine gra;
+   gra.window.clear(Color::Blue);
+   gra.window.display();
   // LineSegment linia(0,0,0,0);
     gra.inicjalizajcja(500, 500, "Gra", false);
     PrimitiveRenderer GRA;
@@ -49,7 +51,7 @@ GRA.rysuj_okrag_pelny(gra.window, 350, 150, 75, Color::Yellow);
   //  GRA.rysuj_kwadrat(gra.window, 10, 100, 100, 10, 50, 70, 150, 150, Color::Green,1);
     //GRA.rysuj_linie(gra.window, 10, 50, 100, 70, Color::Yellow, 1);
   //  GRA.rysuj_linie(gra.window, 100, 70, 100, 150, Color::Yellow, 1);
-
+    GRA.rysuj_ellipse(gra.window, 10, 100, 200, 200, Color::White, 1);
    GRA.rysuj_trojkat_wypelniony(gra.window, 50, 50, 60, 50, 100, 100, Color::Yellow);
     sf::Texture texture;
     texture.create(gra.window.getSize().x, gra.window.getSize().y);
