@@ -52,17 +52,18 @@ GRA.rysuj_okrag_pelny(gra.window, 350, 150, 75, Color::Yellow);
   }*/
 
     //GRA.rysuj_okrag_pelny(gra.window, 350, 150, 75, Color::Yellow);
-    GRA.rysuj_czworokat_wypelniony(gra.window, 10, 100, 100, 50, 50, 70, 150, 150, Color::Green);
+   // GRA.rysuj_czworokat_wypelniony(gra.window, 10, 100, 100, 50, 50, 70, 150, 150, Color::Green);
   //  GRA.rysuj_kwadrat(gra.window, 10, 100, 100, 10, 50, 70, 150, 150, Color::Green,1);
     //GRA.rysuj_linie(gra.window, 10, 50, 100, 70, Color::Yellow, 1);
   //  GRA.rysuj_linie(gra.window, 100, 70, 100, 150, Color::Yellow, 1);
-    GRA.rysuj_ellipse(gra.window, 10, 100, 200, 200, Color::White, 1);
-   GRA.rysuj_trojkat_wypelniony(gra.window, 50, 50, 60, 50, 100, 100, Color::Yellow);
+  //  GRA.rysuj_ellipse(gra.window, 10, 100, 200, 200, Color::White, 1);
+ //  GRA.rysuj_trojkat_wypelniony(gra.window, 50, 50, 60, 50, 100, 100, Color::Yellow);
     sf::Texture texture;
     texture.create(gra.window.getSize().x, gra.window.getSize().y);
     texture.update(gra.window);
     sf::Image image = texture.copyToImage();
-    gra.window.display();
+    point.przesun(gra.window, 100, 100, Color::Red);
+  //  gra.window.display();
 
     // Zapis obrazu na dysk
     if (image.saveToFile("nazwa_obrazu.png")) {
