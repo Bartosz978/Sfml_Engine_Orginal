@@ -19,5 +19,5 @@ void LineSegment::Edytuj(unsigned int nowy_X, unsigned int nowy_Y, enum Odcinek 
 }
 void LineSegment::Rysuj(RenderWindow& window, Color kolor, int rozmiar) {
 	PrimitiveRenderer pomoc;
-	pomoc.rysuj_linie(window, linia[0].X_P, linia[0].Y_P, linia[1].X_P, linia[1].Y_P, kolor, rozmiar);
+	pomoc.rysujOdcinek(window, linia[0].X_P, linia[0].Y_P, linia[1].X_P, linia[1].Y_P, kolor, rozmiar);
 }

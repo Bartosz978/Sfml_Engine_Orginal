@@ -11,48 +11,47 @@ void PrimitiveRenderer::put_pixel(RenderWindow& window, float x, float y, Color 
    //window.display();
 
 }
-void PrimitiveRenderer::rysuj_linie(RenderWindow& window, int x0, int y0, int x1, int y1, Color kolor, int rozmiar) {
-    int x, p;
-    int dy, dx, y, endY;
-    dy = abs(y1 - y0);
-    dx = abs(x1 - x0);
-    p = 2 * dx - dy;
+void PrimitiveRenderer::rysujOdcinek(RenderWindow& window, int& X0, int& Y0, int& X1, int& Y1, Color kolor, float rozmiar)
+{
+    int x1 = static_cast<int>(X0);
+    int x2 = static_cast<int>(X1);
+    int y1 = static_cast<int>(Y0);
+    int y2 = static_cast<int>(Y1);
 
-    if (y0 == y1) {
-        if (x0 > x1) {
-            swap(x0, x1);
-        }
-        for (int xi = x0; xi <= x1; xi++) {
-            put_pixel(window, xi, y0, kolor,rozmiar);
-        }
-        return;
-    }
+    int deltaX = abs(x2 - x1);
+    int deltaY = abs(y2 - y1);
+    int kierunekX;
+    int kierunekY;
 
-    if (y0 > y1) {
-        y = y1;
-        x = x1;
-        endY = y0;
-    }
-    else {
-        y = y0;
-        x = x0;
-        endY = y1;
-    }
+    if (x1 < x2) kierunekX = 1;
+    else kierunekX = -1;
 
-    put_pixel(window, x, y, kolor,rozmiar);
+    if (y1 < y2) kierunekY = 1;
+    else kierunekY = -1;
 
-    while (y < endY) {
-        y++;
-        if (p < 0) {
-            p = p + 2 * dx;
+    int err = deltaX - deltaY;
+
+    while (x1 != x2 || y1 != y2)
+    {
+        if (x1 >= 0 && x1 < window.getSize().x && y1 >= 0 && y1 < window.getSize().y)
+        {
+            PrimitiveRenderer::put_pixel(window, x1, y1, kolor, 1);
+      
         }
-        else {
-            x++;
-            p = p + 2 * (dx - dy);
+        int e2 = 2 * err;
+        if (e2 > -deltaY)
+        {
+            err -= deltaY;
+            x1 += kierunekX;
         }
-        put_pixel(window, x, y, kolor,rozmiar);
+        if (e2 < deltaX)
+        {
+            err += deltaX;
+            y1 += kierunekY;
+        }
     }
 }
+
 void PrimitiveRenderer::rysuj_okrag(RenderWindow& window, int x0, int y0, int radius, Color color,int rozmiar)
 {
     float alpha = 0;
@@ -62,19 +61,22 @@ void PrimitiveRenderer::rysuj_okrag(RenderWindow& window, int x0, int y0, int ra
         PrimitiveRenderer::put_pixel(window, x, y, color,rozmiar);
         alpha += 0.01; // Zwiêksz k¹t o ma³¹ wartoœæ
     }
-   // window.display();
 }
 
 void PrimitiveRenderer:: rysuj_kwadrat(RenderWindow& window,int x1, int x2, int x3, int x4, int y1, int y2, int y3, int y4, Color kolor,int rozmiar) {
-    PrimitiveRenderer::rysuj_linie(window, x1, y1, x2, y2, kolor, rozmiar);
-    PrimitiveRenderer::rysuj_linie(window, x2, y2, x3, y3, kolor, rozmiar);
-    PrimitiveRenderer::rysuj_linie(window, x4, y4, x3, y3, kolor, rozmiar);
-    PrimitiveRenderer::rysuj_linie(window, x1, y1, x4, y4, kolor, rozmiar);
+    
+
+    PrimitiveRenderer::rysujOdcinek(window, x1, y1, x2, y2, kolor, rozmiar);
+    PrimitiveRenderer::rysujOdcinek(window, x2, y2, x3, y3, kolor, rozmiar);
+    PrimitiveRenderer::rysujOdcinek(window, x3, y3, x4, y4, kolor, rozmiar);
+    PrimitiveRenderer::rysujOdcinek(window, x4, y4, x1, y1, kolor, rozmiar);
 }
+
 void PrimitiveRenderer::rysuj_trojkat(RenderWindow& window, int x1, int x2, int x3, int y1, int y2, int y3, Color kolor,int rozmiar) {
-    PrimitiveRenderer::rysuj_linie(window, x1, y1, x2, y2, kolor, rozmiar);
-    PrimitiveRenderer::rysuj_linie(window, x2, y2, x3, y3, kolor, rozmiar);
-    PrimitiveRenderer::rysuj_linie(window, x1, y1, x3, y3, kolor, rozmiar);
+    PrimitiveRenderer::rysujOdcinek(window, x1, y1, x2, y2, kolor, rozmiar);
+    PrimitiveRenderer::rysujOdcinek(window, x2, y2, x3, y3, kolor, rozmiar);
+    PrimitiveRenderer::rysujOdcinek(window, x3, y3, x1, y1, kolor, rozmiar);
+
 }
 void PrimitiveRenderer::rysuj_okrag_pelny(RenderWindow& window, int x0, int y0, int radius, Color color)
 {
@@ -195,24 +197,24 @@ void PrimitiveRenderer::rysuj_czworokat_pelny(RenderWindow& window, int x1, int 
 
 }
 void PrimitiveRenderer::Rysuj_Linie_lamana(RenderWindow& window, vector<Point2D>zbior_punktow, Color kolor,int rozmiar) {
-  
-   if(zbior_punktow.size() == 1 || zbior_punktow.size() == 0) {
-        return;
-    }
-    for (int i = 0; i < zbior_punktow.size()-1; i++) {
-        PrimitiveRenderer::rysuj_linie(window, zbior_punktow[i].X_P, zbior_punktow[i].Y_P, zbior_punktow[i+1].X_P, zbior_punktow[i+1].Y_P,kolor,rozmiar);
-    }
+
+if (zbior_punktow.size() == 1 || zbior_punktow.size() == 0) {
+    return;
+}
+for (int i = 0; i < zbior_punktow.size() - 1; i++) {
+    PrimitiveRenderer::rysujOdcinek(window, zbior_punktow[i].X_P, zbior_punktow[i].Y_P, zbior_punktow[i + 1].X_P, zbior_punktow[i + 1].Y_P, kolor, rozmiar);
+}
 }
 
 void PrimitiveRenderer::rysuj_czworokat_wypelniony(sf::RenderWindow& window, int x1, int x2, int x3, int x4, int y1, int y2, int y3, int y4, sf::Color kolor) {
     PrimitiveRenderer::rysuj_kwadrat(window, x1, x2, x3, x4, y1, y2, y3, y4, kolor, 1);
-    
+
     sf::Texture texture;
     texture.create(window.getSize().x, window.getSize().y);
     texture.update(window);
     sf::Image image = texture.copyToImage();
 
-    int max_Y = 0, max_X = 0, min_X = 0, min_Y = 0;
+    int max_Y = y1, max_X = x1, min_X = x1, min_Y = y1;
     int tablicaX[4] = { x1, x2, x3, x4 };
     int tablicaY[4] = { y1, y2, y3, y4 };
     for (int i = 0; i < 4; i++) {
@@ -229,23 +231,151 @@ void PrimitiveRenderer::rysuj_czworokat_wypelniony(sf::RenderWindow& window, int
             min_Y = tablicaY[i];
         }
     }
+    cout << max_X << " " << max_Y << "  " << min_Y << " " << min_X << endl;
+
     bool pomoc = false;
-for (int i = min_Y; i <= max_Y; i++) {
-    for (int j = min_X; j <= max_X; j++) {
-        if (kolor != image.getPixel(j, i) && pomoc == false) {
+    for (int i = min_Y; i <= max_Y; i++) {
+        for (int j = min_X; j <= max_X; j++) {
+            if (kolor == image.getPixel(j, i) && pomoc == false) {
+                pomoc = true;
+                if (kolor == image.getPixel(j + 1, i)) {
+                    pomoc = false;
+                    break;
+                }
+            }
+            else if (pomoc == true && kolor != image.getPixel(j, i)) {
+                PrimitiveRenderer::put_pixel(window, j, i, kolor, 1);
+
+            }
+            else if (pomoc == true && kolor == image.getPixel(j, i))
+            {
+                pomoc = false;
+                break;
+            }
+
 
         }
-        if (kolor == image.getPixel(j, i) && pomoc == true) {
-            PrimitiveRenderer::put_pixel(window, j, i, kolor, 1);
-            cout << "Dziaala" << endl;
-        } else if (kolor == image.getPixel(j, i) && pomoc == false) {
-            pomoc = true;
-        } else if (kolor != image.getPixel(j, i) && pomoc == true) {
-            pomoc = false;
-        } else if (pomoc == true && (kolor != image.getPixel(j, i))) {
-            break;
-        }
+
     }
 }
+void PrimitiveRenderer::rysuj_trojkat_wypelniony(sf::RenderWindow& window, int x1, int x2, int x3, int y1, int y2, int y3, sf::Color kolor) {
+    PrimitiveRenderer::rysuj_trojkat(window, x1, x2, x3, y1, y2, y3, kolor, 0.5);
 
-}
+    sf::Texture texture;
+    texture.create(window.getSize().x, window.getSize().y);
+    texture.update(window);
+    sf::Image image = texture.copyToImage();
+
+    int max_Y = y1, max_X = x1, min_X = x1, min_Y = y1;
+    int tablicaX[3] = { x1, x2, x3 };
+    int tablicaY[3] = { y1, y2, y3 };
+    for (int i = 0; i < 3; i++) {
+        if (max_X < tablicaX[i]) {
+            max_X = tablicaX[i];
+        }
+        if (max_Y < tablicaY[i]) {
+            max_Y = tablicaY[i];
+        }
+        if (min_X > tablicaX[i]) {
+            min_X = tablicaX[i];
+        }
+        if (min_Y > tablicaY[i]) {
+            min_Y = tablicaY[i];
+        }
+    }
+    cout << max_X << " " << max_Y << "  " << min_Y << " " << min_X << endl;
+    bool pomoc = false;
+    for (int i = min_Y; i <= max_Y; i++) {
+        for (int j = min_X; j <= max_X; j++) {
+            if (kolor == image.getPixel(j, i) && pomoc == false) {
+                pomoc = true;
+                if (kolor == image.getPixel(j + 1, i)) {
+                    pomoc = false;
+                    break;
+                }
+
+            }
+            else if (pomoc == true && kolor != image.getPixel(j, i)) {
+                
+                if (j == max_X && kolor != image.getPixel(j, i) && pomoc == true) {
+                    for (int g = max_X; g > min_X; g--) {
+                        PrimitiveRenderer::put_pixel(window, g, i, image.getPixel(g,i), 1);
+                    }
+                }
+                else             
+      PrimitiveRenderer::put_pixel(window, j, i, kolor, 1);
+                }else if (pomoc == true && kolor == image.getPixel(j, i))
+                {
+                    pomoc = false;
+                    break;
+                }
+
+
+            }
+
+        }
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*void PrimitiveRenderer::rysuj_linie(RenderWindow& window, int x0, int y0, int x1, int y1, Color kolor, int rozmiar) {
+    int x, p;
+    int dy, dx, y, endY;
+    dy = abs(y1 - y0);
+    dx = abs(x1 - x0);
+    p = 2 * dx - dy;
+
+    if (y0 == y1) {
+        if (x0 > x1) {
+            swap(x0, x1);
+        }
+        for (int xi = x0; xi <= x1; xi++) {
+            put_pixel(window, xi, y0, kolor,rozmiar);
+        }
+        return;
+    }
+
+    if (y0 > y1) {
+        y = y1;
+        x = x1;
+        endY = y0;
+    }
+    else {
+        y = y0;
+        x = x0;
+        endY = y1;
+    }
+
+    put_pixel(window, x, y, kolor,rozmiar);
+
+    while (y < endY) {
+        y++;
+        if (p < 0) {
+            p = p + 2 * dx;
+        }
+        else {
+            x++;
+            p = p + 2 * (dx - dy);
+        }
+        put_pixel(window, x, y, kolor,rozmiar);
+    }
+}*/
+        
