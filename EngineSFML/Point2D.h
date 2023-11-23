@@ -3,6 +3,7 @@
 #include <SFML/Graphics.hpp>
 #include <SFML/System.hpp>
 #include <SFML/System/Vector2.hpp>
+#include <cmath>
 //#include "PrimitiveRenderer.h"
 
 class Point2D 

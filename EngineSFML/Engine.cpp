@@ -4,7 +4,7 @@
 using namespace sf;
 using namespace std;
 
-int Engine::inicjalizajcja(unsigned int X, unsigned int Y,string Tytul,bool pelny_ekran){
+int Engine::inicjalizacja(unsigned int X, unsigned int Y,string Tytul,bool pelny_ekran){
 	if(pelny_ekran){
 		VideoMode fullscreen = VideoMode::getFullscreenModes()[0];
 		window.create(fullscreen, Tytul);

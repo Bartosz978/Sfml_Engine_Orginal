@@ -7,6 +7,12 @@
 class LineSegment 
 {
 
+enum Odcinek
+{
+	Poczotek = 0,
+	Koniec = 1
+};
+
 private:
 	std::vector<Point2D>linia;
 public:
@@ -17,9 +23,5 @@ public:
 	void Rysuj(sf:: RenderWindow& window, sf::Color kolor,int rozmiar);
 };
 
-enum Odcinek
-{
-	Poczotek = 0,
-	Koniec = 1
-};
+
 
